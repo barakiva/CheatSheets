@@ -1,0 +1,24 @@
+terminal:
+  open-new: ctrl + `,
+  tab-terminals: ctrl+pgdn/pgup
+editor:  
+  new-file: ctrl + N
+  goto-file: ctrl+p
+  goto-landmark: ctrl+p (@landmark)
+refactor:
+  surround: ctrl+shift+P > wrap (with emmet)
+lines:
+  move-line-up: ALT + UP
+  delete-line: ctrl+ shift+K
+  select-word-at-caret: ctrl+D
+  duplicate-line: ctrl,alt,shit, arrow key
+perspective:
+  explorer: ctrl+0
+  editor: ctrl+1
+  split-editor: ctrl+ (2>)
+  split-editor-at-file: ctrl+enter
+navigation:
+  search: ctrl+p
+vscode:
+  command-palette: ctrl+shift+P
+  

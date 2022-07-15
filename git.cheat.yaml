@@ -1,0 +1,20 @@
+merging:
+  remove-orig: 'git clean -f *.orig'
+config:
+  print-config: 'git config --list'
+comitting:
+  restore: 'git restore *files*'
+  unstage: git restore --staged *files*
+
+
+logging:
+  pretty-log: git log --pretty=oneline
+  good-one: git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+tagging:
+  tag-current-commit: git tag *name
+  checkout-by-tag: git checkout *tagName 
+  checkout-by-tag-parent: git checkout *tagName^
+
+legend: 
+  restore: remove all modified changes
+  unstage: remove the changes from staging, i.e. what is to be comitted, without physically deleting the actual changes

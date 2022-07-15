@@ -1,0 +1,8 @@
+navigation:
+    down-and-up: jk
+    left-and-right: h l
+search:
+    forward-from-caret: / in CMD mode
+    backwards-from-caret: ? in CMD mode
+        press enter to search
+        next occurence: n
