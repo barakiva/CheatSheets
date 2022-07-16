@@ -1,0 +1,8 @@
+jsonplaceholder: 
+  posts: [https://jsonplaceholder.typicode.com/posts/:id, https://jsonplaceholder.typicode.com/posts/:id/comments]
+  comments: [https://jsonplaceholder.typicode.com/comments/:id, https://jsonplaceholder.typicode.com/comments?postId=id]
+  albums: https://jsonplaceholder.typicode.com/albums/:id
+  photos: https://jsonplaceholder.typicode.com/photos/:id
+  todos: https://jsonplaceholder.typicode.com/todos/:id
+  users: https://jsonplaceholder.typicode.com/users/:id
+  
