@@ -21,4 +21,4 @@ navigation:
   search: ctrl+p
 vscode:
   command-palette: ctrl+shift+P
-  
+  settings-location: ~/.config/Code/User/settings.json

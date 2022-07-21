@@ -1,0 +1,3 @@
+imports:
+  import-cjs-into-es6: import pkg from 'passport-local';
+                       const {LocalStrategy} = pkg;

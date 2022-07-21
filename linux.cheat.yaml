@@ -1,0 +1,2 @@
+permissions:
+  check-permissions: ls -l bin/firstscript

@@ -6,7 +6,10 @@ comitting:
   restore: 'git restore *files*'
   unstage: git restore --staged *files*
 branches:
-  add-new-branch:  git push --set-upstream origin new-branch
+  add-new-branch: git checkout -b BRANCH_NAME
+  add-new-branch-not-in-remote:  git push --set-upstream origin new-branch
+  see-branches-local: git branch
+  see-branches-remote: git branch -r
 
 logging:
   pretty-log: git log --pretty=oneline
