@@ -1,0 +1,10 @@
+view:
+  running: docker ps
+  local-images: docker images
+create:
+  run: docker run REPOSITORY_NAME
+  run-commands-of-running-container: docker exec -it NAME bash
+options:
+  name: --name NAME
+  run-image-off-terminal: -d
+  specify-port: -p ACCESS_PORT:VIRTUAL_PORT

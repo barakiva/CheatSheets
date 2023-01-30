@@ -1,2 +1,14 @@
 permissions:
   check-permissions: ls -l bin/firstscript
+  give: ## execute 1, read 2, write 4. rwx = 7,--x=1,rw-=6,r--=2
+        ## 755=OGE.owner=7,ground=5=-wx,everyone=5=-wx
+    execution: chmod 755
+commands:
+  see-all-commands: compgen -c
+  bash-aliases: compgen -a
+  user-aliases: compgen -u
+  groups: compgen -g
+  service-names: comptgen -s
+apps:
+  flatpak:
+    list-apps: flatpak list --apps
