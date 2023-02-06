@@ -1,5 +1,6 @@
 merging:
   remove-orig: 'git clean -f *.orig'
+  diff: git diff
 config:
   print-config: 'git config --list'
 comitting:
@@ -10,7 +11,16 @@ branches:
   add-new-branch-not-in-remote:  git push --set-upstream origin new-branch
   see-branches-local: git branch
   see-branches-remote: git branch -r
-
+pushing:
+  push: git push REMOTE REMOTE_BRANCH
+  # Connect a branch to a remote branch by default (no need to specify branch when pushing or pulling)
+  set-upstream: git branch --set-upstream-to=REMOTE/BRANCH 
+pulling:
+  # Fast foreward, which is pulling when all new remote commits DO NOT conflict with new local code
+  easy-pull: git pull --ff-only 
+  merge: git merge REMOTE/BRANCH
+  # Whenever two branches to be merged do not share a common trunk (i.e. unrelated history)
+  merge-unrelated: git merge REMOTE/BRANCH --allow-unrelated-histories
 logging:
   pretty-log: git log --pretty=oneline
   good-one: git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
