@@ -8,3 +8,17 @@ options:
   name: --name NAME
   run-image-off-terminal: -d
   specify-port: -p ACCESS_PORT:VIRTUAL_PORT
+run:
+  # -d, Detached, doesn't run in the terminal -p Expose a port as in HOST_P:CONTAINER_P
+  run-container: docker run -d -p '808:8080' 'IMAGE:TAG'
+  and:
+    name: docker run --name="my name"
+
+manage:
+  stop: sudo docker stop
+  s-all: sudo docker stop $(sudo docker ps -a -q)
+  remove: sudo docker rm
+  r-all: sudo docker rm $(sudo docker ps -a -q)
+login: docker login
+push: docker push USERNAME/REPONAME:TAG
+  commit: docker commit CONTAINER-ID USERNAME/REPONAME:TAG

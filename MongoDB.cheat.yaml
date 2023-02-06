@@ -1,0 +1,2 @@
+deploy: docker run -d -p 2717:27017 mongo:latest
+connect: mongodb://localhost:2717
