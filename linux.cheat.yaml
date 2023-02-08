@@ -12,3 +12,4 @@ commands:
 apps:
   flatpak:
     list-apps: flatpak list --apps
+  remove-inactive: rm /home/<user>/.local/share/applications/APP.desktop
