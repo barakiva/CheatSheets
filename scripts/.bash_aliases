@@ -1,5 +1,5 @@
 # ~/.bash_aliases
-
+alias cheats='code ~/Development/Utility/Cheats'
 # Git
 function gp() {
     git add .
