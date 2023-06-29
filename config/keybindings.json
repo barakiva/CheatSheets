@@ -1,0 +1,85 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+	{
+		"key": "ctrl+left",
+		"command": "cursorWordPartLeft"
+	},
+	{
+		"key": "ctrl+shift+left",
+		"command": "cursorWordPartLeftSelect"
+	},
+	{
+		"key": "ctrl+right",
+		"command": "cursorWordPartRight"
+	},
+	{
+		"key": "ctrl+shift+right",
+		"command": "cursorWordPartRightSelect"
+	},
+	{
+		"key": "ctrl+shift+f10",
+		"command": "python.execInTerminal-icon"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "editor.action.smartSelect.grow",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "editor.action.smartSelect.shrink",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "f5",
+		"command": "workbench.action.debug.start",
+		"when": "debuggersAvailable && debugState == 'inactive'"
+	},
+	{
+		"key": "f5",
+		"command": "-workbench.action.debug.start",
+		"when": "debuggersAvailable && debugState == 'inactive'"
+	},
+	{
+		"key": "ctrl+alt+enter",
+		"command": "github.copilot.generate",
+		"when": "editorTextFocus && github.copilot.activated"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "-github.copilot.generate",
+		"when": "editorTextFocus && github.copilot.activated"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "editor.action.joinLines"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "-workbench.action.togglePanel"
+	},
+	{
+		"key": "ctrl+b",
+		"command": "-workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+b",
+		"command": "-markdown.extension.editing.toggleBold",
+		"when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
+	},
+	{
+		"key": "ctrl+b",
+		"command": "editor.action.revealDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "f12",
+		"command": "-editor.action.revealDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "-github.copilot.generate",
+		"when": "editorTextFocus && github.copilot.activated && !inInteractiveInput && !interactiveEditorFocused"
+	}
+]

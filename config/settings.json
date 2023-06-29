@@ -1,0 +1,86 @@
+{
+	"tabnine.experimentalAutoImports": true,
+	"files.autoSave": "afterDelay",
+	"editor.suggestSelection": "first",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"security.workspace.trust.untrustedFiles": "open",
+	"explorer.confirmDragAndDrop": false,
+	"extensions.supportUntrustedWorkspaces": {},
+	"explorer.confirmDelete": false,
+	"workbench.startupEditor": "none",
+	"workbench.iconTheme": "material-icon-theme",
+	"editor.minimap.enabled": false,
+	"debug.javascript.autoAttachFilter": "disabled",
+	"workbench.colorTheme": "Solarized Dark",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"editor.wordWrap": "on",
+	"files.exclude": {
+		"**/.idea": true
+	},
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	"editor.renderWhitespace": "all",
+	"sync.gist": "01137761e9610c22bcc65dacc81fd61c",
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"redhat.telemetry.enabled": false,
+	"editor.linkedEditing": true,
+	"javascript.suggest.completeJSDocs": false,
+	"tabnine.disableLineRegex": [],
+	"editor.quickSuggestions": {
+		"strings": "on"
+	},
+	"editor.snippetSuggestions": "top",
+	"github.copilot.enable": {
+		"*": true,
+		"yaml": true,
+		"plaintext": true,
+		"markdown": true,
+		"scminput": false,
+		"javascript": true
+	},
+	"terminal.integrated.profiles.linux": {
+		"bash": {
+			"path": "bash",
+			"icon": "terminal-bash"
+		},
+		"zsh": {
+			"path": "zsh"
+		},
+		"fish": {
+			"path": "fish"
+		},
+		"tmux": {
+			"path": "tmux",
+			"icon": "terminal-tmux"
+		},
+		"pwsh": {
+			"path": "pwsh",
+			"icon": "terminal-powershell"
+		},
+		"bash (2)": {
+			"path": "/usr/bin/bash"
+		}
+	},
+	"terminal.integrated.defaultProfile.linux": "bash (2)",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.tabSize": 2,
+	"prettier.useTabs": true,
+	"prettier.bracketSameLine": true,
+	"javascript.inlayHints.parameterNames.enabled": "literals",
+	"settingsSync.ignoredSettings": [],
+	"git.autofetch": true,
+	"settingsSync.ignoredExtensions": [],
+	"editor.inlineSuggest.enabled": true,
+	"[python]": {
+		"editor.formatOnType": true
+	},
+	"github.copilot.advanced": {},
+	"editor.inlineSuggest.showToolbar": "always",
+	"easycode.userEmail": "barakiva1@gmail.com",
+	"cSpell.userWords": ["dotenv", "Nuxt", "pinia"],
+	"files.associations": {
+		"Pipfile": "toml"
+	}
+}
