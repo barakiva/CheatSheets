@@ -1,27 +1,58 @@
-# ~/.bash_aliases
-alias cheats='code ~/Development/Utility/Cheats'
+# Cheats
+# yy - yank (copy) line
+# dd - delete (and cut) line 
+# p - paste
+# u - undo
+# Linux
+alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+## Utilities
+alias grep='grep --color=auto'
+alias cheats='code "/home/barakiva/Development/Code Snippets/cheatsheets"'
+alias code-new="mkdir ~/Development/vscode"
+# Paths
+alias lin="cd ~/Development/Linux"
+export PATH=/opt/firefox/firefox:$PATH
+alias desktop="touch ~/.local/share/applications/$arg.desktop && vim ~/.local/share/applications/$arg.desktop"
+alias edit-desktop="cd ~/.local/share/applications"
+# Programming
+
+## Python
+alias py="python3"
+alias pyd="nodemon --exec python3 app.py"
+alias pys="pipenv shell"
+alias pr="pipenv run"
+## Web Dev
+alias hd="hugo serve -D"
+### JS
+alias nr="npm run"
+alias ns="npm run start"
+alias nd="npm run dev"
+alias nt="npm run test"
 # Git
 function gp() {
     git add .
     git commit -m "$1"
     git push
 }
-alias gac="git add . && git commit"
-
-# Python
-alias py="python3"
-alias pr="pipenv run"
-
-# JavaScript
-alias nr="npm run"
-alias nid="npm i && npm run dev"
-alias ns="npm run start"
-alias nd="npm run dev"
-alias nt="npm run test"
-
+function gac() {
+	git add .
+    git commit -m "$1"
+}
+alias gpl="git push origin main"
+# Tools
+## yt-dlp
+alias yu="sudo yt-dlp -U"
+alias y="yt-dlp -o '~/Downloads/vidya/%(title)s.%(ext)s'"
+## yt-dl
+alias ydlu="sudo -H pip install --upgrade youtube-dl"
+alias ydl="youtube-dl"
 # Bash Configuration
 alias bl="source ~/.bashrc"
 # Other
-alias aliases="vim ~/.bash_aliases"        # Modify aliases
-alias cheats="code $"               # Quick access to code snippets
-alias hd="hugo server --config config-dev.toml"  # Start Hugo development server
+alias cheats="code ~/Development/Utility/Cheats"
+# Bash Configuration
+alias bl="source ~/.bashrc"
+alias aliases="vim ~/.bash_aliases"
+alias src="source .bashrc"
+# Other
+alias hd="hugo server --config config-dev.toml"
