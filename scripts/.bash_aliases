@@ -41,6 +41,10 @@ function gac() {
 	git add .
     git commit -m "$1"
 }
+# Push new local branch upstream
+function gpb() {
+    git push -u origin "$1"
+}
 alias gpl="git push origin main"
 # Tools
 ## yt-dlp
