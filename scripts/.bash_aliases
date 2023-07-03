@@ -46,13 +46,21 @@ alias y="yt-dlp -o '~/Downloads/vidya/%(title)s.%(ext)s'"
 ## yt-dl
 alias ydlu="sudo -H pip install --upgrade youtube-dl"
 alias ydl="youtube-dl"
-# Bash Configuration
-alias bl="source ~/.bashrc"
 # Other
 alias cheats="code ~/Development/Utility/Cheats"
+function cheats-u() {
+    cd ~/Development/Utility/Cheats
+    git fetch
+    git pull
+}
+function cheats-p() {
+    cd ~/Development/Utility/Cheats
+    git add .
+    git commit -m "$1"
+    git push
+}
 # Bash Configuration
-alias bl="source ~/.bashrc"
+alias src="source ~/.bashrc"
 alias aliases="vim ~/.bash_aliases"
-alias src="source .bashrc"
 # Other
 alias hd="hugo server --config config-dev.toml"
