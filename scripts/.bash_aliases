@@ -21,6 +21,7 @@ alias py="python3"
 alias pyd="nodemon --exec python3 app.py"
 alias pys="pipenv shell"
 alias pr="pipenv run"
+alias pi="pipenv install"
 ## Web Dev
 alias hd="hugo serve -D"
 ### JS
