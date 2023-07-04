@@ -18,7 +18,7 @@ alias edit-desktop="cd ~/.local/share/applications"
 
 ## Python
 alias py="python3"
-alias pyd="nodemon --exec python3 app.py"
+alias pyd="nodemon --exec python3 ./src/app.py"
 alias pys="pipenv shell"
 alias pr="pipenv run"
 alias pi="pipenv install"
