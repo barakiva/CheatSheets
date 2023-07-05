@@ -38,6 +38,11 @@ function gp() {
     git commit -m "$1"
     git push
 }
+function gpl() {
+    git add .
+    git commit -m "lazy commit"
+    git push
+}
 function gac() {
 	git add .
     git commit -m "$1"
@@ -49,7 +54,6 @@ function gt() {
 function gpb() {
     git push -u origin "$1"
 }
-alias gpl="git push origin main"
 # Tools
 ## yt-dlp
 alias yu="sudo yt-dlp -U"
