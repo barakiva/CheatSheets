@@ -43,6 +43,11 @@ function gpl() {
     git commit -m "lazy commit"
     git push
 }
+function gpc() {
+    git add .
+    git commit -m "$1"
+    git push origin HEAD:"$2" # <name-of-remote-branch>
+}
 function gac() {
 	git add .
     git commit -m "$1"
