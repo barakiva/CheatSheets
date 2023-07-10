@@ -25,6 +25,14 @@ alias pr="pipenv run"
 alias pi="pipenv install"
 alias pu="pipenv uninstall"
 alias pyb="pipenv install && npm install && nodemon --exec python3 ./src/app.py" #python bootstrap
+### purge
+function pp() {
+    deactivate
+    exit
+    pipenv --rm
+    pipenv shell
+    pipenv install
+}
 ## Web Dev
 alias hd="hugo serve -D"
 ### JS
@@ -55,6 +63,7 @@ function gac() {
 function gt() {
     git tag -a "$1" -m "$2"
 }
+alias gs="git status"
 # Push new local branch upstream
 function gpb() {
     git push -u origin "$1"
