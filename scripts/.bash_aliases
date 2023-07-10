@@ -19,12 +19,12 @@ alias edit-desktop="cd ~/.local/share/applications"
 ## Python
 alias py="python3"
 alias pyd="nodemon --exec python3 ./src/app.py"
+### Pipenv
 alias pys="pipenv shell"
 alias pr="pipenv run"
 alias pi="pipenv install"
-alias pyw="nodemon --exec python3 ./src/app.py"
+alias pu="pipenv uninstall"
 alias pyb="pipenv install && npm install && nodemon --exec python3 ./src/app.py" #python bootstrap
-alias pysd="pipenv --rm"
 ## Web Dev
 alias hd="hugo serve -D"
 ### JS
