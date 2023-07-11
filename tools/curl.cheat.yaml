@@ -1,1 +1,2 @@
 follow-redirects: curl URL -L
+request-ipv6: curl http://[2a00:1450:4001:82b::200e]

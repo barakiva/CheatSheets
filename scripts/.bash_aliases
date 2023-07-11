@@ -5,6 +5,7 @@
 # u - undo
 # Linux
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+alias myip="curl -s https://api.ipify.org"
 ## Utilities
 alias grep='grep --color=auto'
 alias cheats='code "/home/barakiva/Development/Code Snippets/cheatsheets"'
