@@ -6,6 +6,11 @@
 # Linux
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 alias myip="curl -s https://api.ipify.org"
+function ssl() {
+    openssl genpkey -algorithm RSA -out server.key -pkeyopt rsa_keygen_bits:2048 &&
+    openssl req -new -key server.key -out server.csr &&
+    openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+}
 ## Utilities
 alias grep='grep --color=auto'
 alias cheats='code "/home/barakiva/Development/Code Snippets/cheatsheets"'
