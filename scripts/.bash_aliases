@@ -41,6 +41,11 @@ function pp() {
 }
 ## Web Dev
 alias hd="hugo serve -D"
+function nos() {
+    nvm install node 
+    nvm install --lts
+    nvm use --lts
+}
 ### JS
 alias nr="npm run"
 alias ns="npm run start"
