@@ -46,6 +46,16 @@ function nos() {
     nvm install --lts
     nvm use --lts
 }
+function vc() {
+    # echo "Creating Vue.js project..."
+    # npm create vue@3 -y
+
+    spawn npm create vue3
+
+    expect "Project name" { send "$1\r" }
+    expect "Add TypeScript?" { send "Yes\r" }
+    expect "Add JSX Support?" { send "Yes\r" }
+}
 ### JS
 alias nr="npm run"
 alias ns="npm run start"
