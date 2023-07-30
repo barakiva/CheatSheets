@@ -15,6 +15,8 @@ function ssl() {
 alias grep='grep --color=auto'
 alias cheats='code "/home/barakiva/Development/Code Snippets/cheatsheets"'
 alias code-new="mkdir ~/Development/vscode"
+alias dvp="cd ~/Development/Projects"
+alias dvl="cd ~/Development/Lab"
 # Paths
 alias lin="cd ~/Development/Linux"
 export PATH=/opt/firefox/firefox:$PATH
