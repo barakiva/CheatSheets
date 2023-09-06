@@ -86,8 +86,16 @@ function gac() {
 function gt() {
     git tag -a "$1" -m "$2"
 }
+function co() {
+    git checkout "$1"
+}
 alias gs="git status"
 # Push new local branch upstream
+function gb() {
+    git branch "$1"
+    git push -u origin "$1"
+
+}
 function gpb() {
     git push -u origin "$1"
 }
