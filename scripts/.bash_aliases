@@ -3,6 +3,7 @@
 # dd - delete (and cut) line 
 # p - paste
 # u - undo
+# echo "hello world" > text.txt
 # Linux
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 alias myip="curl -s https://api.ipify.org"
@@ -90,15 +91,21 @@ function co() {
     git checkout "$1"
 }
 alias gs="git status"
-# Push new local branch upstream
+alias gsb="git branch"
+## Branches
 function gb() {
+    git branch "$@"
+}
+function gbp() {
     git branch "$1"
     git push -u origin "$1"
+}
+### Delete local and remote branch
+function gbd() {
+    git branch -d "$1" # delete local branch
+    git push origin --delete "$1" # delete remote branch
+}
 
-}
-function gpb() {
-    git push -u origin "$1"
-}
 # Tools
 ## yt-dlp
 alias yu="sudo yt-dlp -U"
