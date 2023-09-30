@@ -90,6 +90,9 @@ function gt() {
 function co() {
     git checkout "$1"
 }
+function gl() {
+    git log --oneline
+}
 alias gs="git status"
 alias gsb="git branch"
 ## Branches
