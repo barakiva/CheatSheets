@@ -112,7 +112,7 @@ function gbd() {
 # Tools
 ## yt-dlp
 alias yu="sudo yt-dlp -U"
-alias y="yt-dlp -o '~/Downloads/vidya/%(title)s.%(ext)s'"
+alias y="yt-dlp -o '/home/barakiva/Downloads/vidya/%(title)s.%(ext)s'"
 ## yt-dl
 alias ydlu="sudo -H pip install --upgrade youtube-dl"
 alias ydl="youtube-dl"
