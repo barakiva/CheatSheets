@@ -24,7 +24,24 @@ export PATH=/opt/firefox/firefox:$PATH
 alias desktop="touch ~/.local/share/applications/$arg.desktop && vim ~/.local/share/applications/$arg.desktop"
 alias edit-desktop="cd ~/.local/share/applications"
 # Programming
-
+demo() {
+    mkdir ~/Development/Lab/"$1"
+    cd ~/Development/Lab/"$1"
+}
+demo-g() {
+    git clone $1 ~/Development/Lab/"$2"
+    code ~/Development/Lab/"$2"
+}
+# demo() {
+#     local base=~/Development/
+#     while getopts "g" flag; do
+#         case $flag in
+#             g) # Handle the -g flag
+#             echo "Hello worl1213d"
+#             ;;
+#         esac
+#     done
+# }
 ## Python
 alias py="python3"
 alias pyd="nodemon --exec python3 ./src/app.py"
