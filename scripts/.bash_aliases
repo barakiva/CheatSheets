@@ -137,7 +137,6 @@ function gbd() {
     git branch -d "$1" # delete local branch
     git push origin --delete "$1" # delete remote branch
 }
-
 # Tools
 ## yt-dlp
 alias yu="sudo yt-dlp -U"
