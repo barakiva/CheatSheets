@@ -4,6 +4,11 @@
 # p - paste
 # u - undo
 # echo "hello world" > text.txt
+## Utilities
+cheats() {
+    code ~/Development/Utility/Snippets && exit
+}
+# Symlink:  $ ln -s origin target
 # Linux
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 alias myip="curl -s https://api.ipify.org"
@@ -12,26 +17,33 @@ function ssl() {
     openssl req -new -key server.key -out server.csr &&
     openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 }
-## Utilities
 alias grep='grep --color=auto'
-alias cheats='code "/home/barakiva/Development/Code Snippets/cheatsheets"'
-alias code-new="mkdir ~/Development/vscode"
-alias dvp="cd ~/Development/Projects"
-alias dvl="cd ~/Development/Lab"
 # Paths
-alias lin="cd ~/Development/Linux"
 export PATH=/opt/firefox/firefox:$PATH
 alias desktop="touch ~/.local/share/applications/$arg.desktop && vim ~/.local/share/applications/$arg.desktop"
 alias edit-desktop="cd ~/.local/share/applications"
 # Programming
 demo() {
     mkdir ~/Development/Lab/"$1"
-    cd ~/Development/Lab/"$1"
+    code ~/Development/Lab/"$1" && exit
 }
 demo-g() {
     git clone $1 ~/Development/Lab/"$2"
-    code ~/Development/Lab/"$2"
+    code ~/Development/Lab/"$2" && exit
 }
+prj() {
+    mkdir ~/Development/Projects/"$1"
+    code ~/Development/Projects/"$1" && exit
+}
+prj-g() {
+    git clone $1 ~/Development/Projects/"$2"
+    code ~/Development/Projects/"$2" && exit
+}
+gc() {
+    git clone $1 ~/Development/Lab/"$2"
+    code ~/Development/Lab/"$2" && exit
+}
+
 # demo() {
 #     local base=~/Development/
 #     while getopts "g" flag; do
@@ -133,19 +145,6 @@ alias y="yt-dlp -o '/home/barakiva/Downloads/vidya/%(title)s.%(ext)s'"
 ## yt-dl
 alias ydlu="sudo -H pip install --upgrade youtube-dl"
 alias ydl="youtube-dl"
-# Other
-alias cheats="code ~/Development/Utility/Cheats"
-function cheats-u() {
-    cd ~/Development/Utility/Cheats
-    git fetch
-    git pull
-}
-function cheats-p() {
-    cd ~/Development/Utility/Cheats
-    git add .
-    git commit -m "$1"
-    git push
-}
 # Bash Configuration
 alias src="source ~/.bashrc"
 alias aliases="vim ~/.bash_aliases"
