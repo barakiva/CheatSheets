@@ -17,6 +17,13 @@ function ssl() {
     openssl req -new -key server.key -out server.csr &&
     openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 }
+function do-ssh() {
+    ssh-keygen -t ed25519 -C "$1"
+}
+function do-ssh-add() {
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/"$1"
+}
 alias grep='grep --color=auto'
 # Paths
 export PATH=/opt/firefox/firefox:$PATH
