@@ -85,6 +85,15 @@ function nos() {
     nvm install --lts
     nvm use --lts
 }
+
+## Devops
+alias tf="terraform"
+
+function azl() {
+    az login
+    az account set --subscription "sub"
+
+}
 function vc() {
     # echo "Creating Vue.js project..."
     # npm create vue@3 -y
