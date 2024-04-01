@@ -14,3 +14,13 @@ gowatchmedo log \
     --recursive \
     --verbose \
     .
+
+
+pipdeptree
+pip show pkg
+
+
+function pyv() {
+    python3 -m venv venv
+    source venv/bin/activate
+}
