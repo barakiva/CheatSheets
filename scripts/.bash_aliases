@@ -5,10 +5,14 @@
 # u - undo
 # echo "hello world" > text.txt
 ## Utilities
-cheats() {
-    code ~/Development/Utility/Snippets && exit
+function cheats() {
+    code ~/Development/Projects/cheats; exit
 }
 # Symlink:  $ ln -s origin target
+# Python
+function pybin() {
+    ls -1 $VIRTUAL_ENV/bin
+}
 # Linux
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 alias myip="curl -s https://api.ipify.org"
