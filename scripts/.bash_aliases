@@ -5,9 +5,8 @@
 # u - undo
 # echo "hello world" > text.txt
 ## Utilities
-alias pn=pnpm
-cheats() {
-    code ~/Development/Utility/Snippets && exit
+function cheats() {
+    code ~/Development/Projects/cheats; exit
 }
 function pcv {
     mkdir -p ~/Development/Lab/"$1"
@@ -54,6 +53,10 @@ EOT
 
 
 # Symlink:  $ ln -s origin target
+# Python
+function pybin() {
+    ls -1 $VIRTUAL_ENV/bin
+}
 # Linux
 ##Tar
 
