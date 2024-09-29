@@ -5,11 +5,65 @@
 # u - undo
 # echo "hello world" > text.txt
 ## Utilities
+alias pn=pnpm
 cheats() {
     code ~/Development/Utility/Snippets && exit
 }
+function pcv {
+    mkdir -p ~/Development/Lab/"$1"
+    cd ~/Development/Lab/"$1"
+    pnpm create vite . --template vue-ts
+    pnpm install
+
+    # Create the tasks.json file for VS Code
+    mkdir -p .vscode
+    cat <<EOT > .vscode/tasks.json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Dev Server",
+            "type": "shell",
+            "command": "pnpm dev",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
+EOT
+
+    code .
+    sleep 2 # Wait a moment for VS Code to open
+
+    # Use Code Runner to execute the task
+    code --install-extension formulahendry.code-runner
+    sleep 2 # Wait for the extension to install
+
+    # Run the task to start the development server
+    code --command workbench.action.tasks.runTask --args "Run Dev Server"
+}
+
+
 # Symlink:  $ ln -s origin target
 # Linux
+##Tar
+
+# -x --extract --get uncompress
+# -v --verbose
+# -f --file
+# -z --gzip Use gzip to uncompress
+function untar() {
+    tar -xzf $1
+}
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 alias myip="curl -s https://api.ipify.org"
 function ssl() {
@@ -18,8 +72,8 @@ function ssl() {
     openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 }
 function do-ssh() {
-    ssh-keygen -t rsa -b 4096 -m PEM -f ~/.ssh/"$1"
-    ssh-keygen -e -m PEM -f ~/.ssh/"$1".pub > ~/.ssh/"$1".pem
+    ssh-keygen -t ed25519 -C "$2" -m PEM -f ~/.ssh/$1.pem
+
 
 }
 function do-ssh-add() {

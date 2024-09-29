@@ -1,5 +1,7 @@
 
-
+function dl() {
+  cat ~/Development/Devops/Docker/dockertoken | sudo docker login --username tortugaport --password-stdin
+}
 function build() {
   docker build -t $1 .
 } 
