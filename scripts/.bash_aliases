@@ -50,7 +50,14 @@ EOT
     # Run the task to start the development server
     code --command workbench.action.tasks.runTask --args "Run Dev Server"
 }
+function dogpg() {
+    # TODO split the domain out of the URI
+    URI_DOMAIN =  $URI
+    curl -fsSL $URI | sudo gpg --dearmor -o /usr/share/keyrings/"$URI_DOMAIN"
+    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/'$URI_DOMAIN'.gpg] '$URI' $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/'$URI_DOMAIN'.list > /dev/null
+    sudo apt update
 
+}
 
 # Symlink:  $ ln -s origin target
 # Python
